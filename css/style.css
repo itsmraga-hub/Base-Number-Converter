@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+    font-size: 62.5%;
+}
+
+.container {
+    width: 80%;
+    margin: 3em auto;
+    padding: 1em 1em;
+    border: 0.1em solid rgb(0, 0, 0);
+    background-color: #191765;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.container .container_title {
+    font-size: 3em;
+    color: #9390ff;
+    padding: 1rem 0;
+}
+
+.container .form .label {
+    font-size: 2em;
+    margin: 0.1rem;
+    padding: 0.1rem;
+}
+
+.container .form {
+    display: flex;
+    flex-direction: column;
+    padding: 2em 1em;
+    gap: 1em;
+}
+
+.container .form .input-num {
+    width: 50%;
+    margin: 0.1em auto;
+    padding: 0.5em;
+    font-size: 1em;
+    color: blueviolet;
+}
+
+.container .form .option-container {
+    width: 50%;
+    padding: 0.5em;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin: 0.1em auto;
+    letter-spacing: 0.5px;
+}
+
+.container .form .btn {
+    width: 50%;
+    padding: 1em;
+    margin: 10px auto;
+    font-weight: bold;
+    background-color: #5e42d7;
+    border: 1px solid #9390ff;
+    border-radius: 4px;
+}
+
+.container .form .answer {
+    font-size: 2em;
+    text-align: center;
+    border: 1px solid rgb(69, 69, 223);
+}
+
+.container .form .answer .ans-text {
+    font-size: 2em;
+    overflow-wrap: break-word;
+}
+
+.small {
+    font-size: 1.2rem;
+}
