@@ -199,7 +199,7 @@ window.onload = () => {
     if (storedData) {
         number.value = storedData.number;
         currentBase.value = storedData.base;
-        currentBase.value = SetCurrentBase(storedData.base)
+        // currentBase.value = SetCurrentBase(storedData.base)
         newBase.value = storedData.newBase;
     }
     // ans = convert();
@@ -261,7 +261,7 @@ const obj = {
 arr.forEach((input) => {
     input.addEventListener('input', () => {
         obj.number = number.value;
-        currentBase.value = SetCurrentBase(obj.number);
+        // currentBase.value = SetCurrentBase(obj.number);
         obj.base = currentBase.value;
         obj.nBase = newBase.value;
         localStorage.setItem('number', obj.number);
