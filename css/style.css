@@ -4,13 +4,15 @@
 }
 
 body {
-    overflow: hidden;
+    overflow-x: hidden;
     font-size: 62.5%;
+    font-family: sans-serif;
+    letter-spacing: 1px;
 }
 
 .container {
     width: 80%;
-    margin: 3em auto;
+    margin: auto;
     padding: 1em 1em;
     border: 0.1em solid rgb(0, 0, 0);
     background-color: #191765;
@@ -25,40 +27,43 @@ body {
     padding: 1rem 0;
 }
 
-.container .form .label {
+.label {
     font-size: 2em;
     margin: 0.1rem;
     padding: 0.1rem;
 }
 
 .container .form {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 2em 1em;
     gap: 1em;
 }
 
-.container .form .input-num {
-    width: 50%;
-    margin: 0.1em auto;
-    padding: 0.5em;
-    font-size: 1em;
+.input-num {
+    padding: 1em 0 1em 0.5em;
+    font-size: 2em;
     color: blueviolet;
 }
 
-.container .form .option-container {
-    width: 50%;
-    padding: 0.5em;
-    font-size: 0.8em;
+.option-container {
+    width: 100%;
+    padding: 1em 0.5em;
+    font-size: 2em;
     font-weight: bold;
-    margin: 0.1em auto;
+    /* margin: 0.1em auto; */
     letter-spacing: 0.5px;
 }
 
+.btns {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 .container .form .btn {
-    width: 50%;
     padding: 1em;
-    margin: 10px auto;
+    font-size: 1.7em;
     font-weight: bold;
     background-color: #5e42d7;
     border: 1px solid #9390ff;
@@ -78,4 +83,10 @@ body {
 
 .small {
     font-size: 1.2rem;
+}
+
+@media (max-width: 320px) {
+    body {
+        font-size: 50%;
+    }
 }
