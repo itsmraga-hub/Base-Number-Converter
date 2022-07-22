@@ -4,17 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Number converter</title>
   </head>
   <body>
     <main class="container">
-      <h1 class="container_title">Number Converter</h1>
+      <h1 class="container_title">Base Number Converter</h1>
       <form action="" class="form" id="form">
-        <label for="number" class="label">Number:
+        <label for="number" class="label">Number:</label>
           <input type="text" class="input-num" name="number" id="number" placeholder="number"/>
-        </label>
-        <label for="curentBase" class="label"> Current Base:
+        <label for="curentBase" class="label"> Current Base:</label>
             <select name="curentBase" id="currentBase" value="2"
         class="option-container">
             <option value="2" class="option-item">Binary</option>
@@ -22,17 +21,19 @@
             <option value="10" class="option-item">Decimal</option>
             <option value="16" class="option-item">HexaDecimal</option>
         </select>
-        </label>
-        <label for="newBase" class="label"> New Base:
+        <label for="newBase" class="label"> New Base:</label>
             <select name="newBase" id="newBase" class="option-container">
                 <option value="2" class="option-item">Binary</option>
                 <option value="8" class="option-item">Octal</option>
                 <option value="10" class="option-item">Decimal</option>
                 <option value="16" class="option-item">HexaDecimal</option>
             </select>
-        </label>
-        <input type="submit" value="Convert" class="btn"/>
-        <p id="answer" class="answer"> <span id="answer-text" class="ans-text"></span></p>
+        <div class="btns">
+          <input type="submit" value="Convert" class="btn convert-btn"/>
+          <input type="submit" value="Swap" class="btn swap-btn" disabled/>
+          <input type="submit" value="Reset" class="btn reset-btn"/>
+        </div>
+        <p id="answer" class="answer"><span id="answer-text" class="ans-text"></span></p>
       </form>
     </main>
     <script src="js/app.js"></script>
