@@ -181,10 +181,6 @@ function BaseNumberConverter(number, base, newbase) {
     }
 }
 
-// console.log(BaseNumberConverter("AEBDE1", 16, 10))
-// console.log(BaseNumberConverter(31, 10, 16))
-// console.log(DecimalToHexaDecimal(11451873));
-
 const form = document.querySelector('#form');
 const number = document.querySelector('.input-num');
 const currentBase = document.querySelector('#currentBase');
@@ -201,9 +197,15 @@ window.onload = () => {
         currentBase.value = storedData.base;
         // currentBase.value = SetCurrentBase(storedData.base)
         newBase.value = storedData.newBase;
+        if (validateNumbers(number.value, currentBase.value)) {
+            convert();
+        } else {
+            number.value = '';
+            currentBase.value = '2';
+            newBase.value = '10';
+        }
     }
     // ans = convert();
-    convert();
 }
 
 const Converter =  {
@@ -298,9 +300,23 @@ const convert = () => {
     // return BaseNumberConverter(num, oldBase, newerBase);
 }
 
-const btn = document.querySelector('.btn');
+const convertBtn = document.querySelector('.convert-btn');
+const resetBtn = document.querySelector('.reset-btn');
+const swapBtn = document.querySelector('.swap-btn');
 
 
-btn.addEventListener('submit', () => {
+convertBtn.addEventListener('submit', () => {
     ans = convert();
 });
+
+const swap = (c, n) => {
+    let temp = c.value;
+    c.value = n.value;
+    n.value = temp;
+}
+
+swapBtn.addEventListener('click', swap(currentBase, newBase));
+
+resetBtn.addEventListener('click', () => {
+    localStorage.clear();
+})
