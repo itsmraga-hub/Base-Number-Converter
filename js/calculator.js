@@ -1,7 +1,7 @@
 const numbers = document.querySelectorAll('[data-id="integers"]');
 const operations = document.querySelectorAll('[data-operations]');
-const clear = document.querySelectorAll('[data-all-clear]');
-const allClear = document.querySelectorAll('[data-all-clear]')
+const clear = document.querySelector('[data-all-clear]');
+const allClear = document.querySelector('[data-all-clear]')
 const upperOperand = document.querySelector('.upper-screen');
 const lowerOperand = document.querySelector('.lower-screen');
 
