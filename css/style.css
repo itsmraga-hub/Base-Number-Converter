@@ -1,17 +1,33 @@
+
+
 * {
     margin: 0;
     padding: 0;
 }
 
+html {
+    height: 100%;
+    width: 100%;
+}
+
 body {
+    height: 100%;
+    width: 100%;
     overflow-x: hidden;
     font-size: 62.5%;
     font-family: sans-serif;
     letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
 }
 
 .container {
     width: 80%;
+    max-width: 500px;
     margin: auto;
     padding: 1em 1em;
     border: 0.1em solid rgb(0, 0, 0);
@@ -19,6 +35,7 @@ body {
     display: flex;
     flex-direction: column;
     color: #fff;
+    border-radius: 15px;
 }
 
 .container .container_title {
